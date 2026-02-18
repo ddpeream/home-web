@@ -19,7 +19,9 @@ var logoutBtn = document.querySelector('.logout-btn');
 if (logoutBtn) {
   logoutBtn.addEventListener('click', function() {
     if (confirm('¿Seguro que deseas cerrar sesión?')) {
-      window.location.href = 'index.html';
+      sessionStorage.removeItem('servi_auth');
+      sessionStorage.removeItem('servi_user');
+      window.location.href = 'login.html';
     }
   });
 }

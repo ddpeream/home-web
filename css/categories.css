@@ -1,0 +1,39 @@
+.cats-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 0 24px 4px;
+  margin-bottom: 24px;
+}
+
+.cats-scroll::-webkit-scrollbar { display: none; }
+
+.cat-pill {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border-radius: 50px;
+  padding: 10px 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cat-pill.active {
+  background: var(--peach);
+  box-shadow: 0 4px 14px rgba(242,169,126,0.4);
+}
+
+.cat-pill.active .cat-pill-label { color: white; }
+
+.cat-pill-emoji { font-size: 18px; }
+
+.cat-pill-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+}

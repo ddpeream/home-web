@@ -1,0 +1,113 @@
+.workers-grid {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.worker-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  display: flex;
+  gap: 14px;
+}
+
+.avatar-wrap { position: relative; flex-shrink: 0; }
+
+.w-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+}
+
+.bg-peach { background: var(--peach-light); }
+.bg-sky { background: var(--sky-light); }
+.bg-sage { background: var(--sage-light); }
+.bg-lav { background: var(--lav-light); }
+
+.online-dot {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 12px;
+  height: 12px;
+  background: var(--sage);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.w-info { flex: 1; }
+
+.w-name {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.w-role {
+  font-size: 12px;
+  color: var(--mid);
+  margin-bottom: 8px;
+}
+
+.w-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.w-badges { display: flex; gap: 5px; }
+
+.w-badge {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 50px;
+}
+
+.wb-arl { background: var(--sage-light); color: var(--sage); }
+.wb-seg { background: var(--sky-light); color: var(--sky); }
+
+.w-rating { font-size: 12px; font-weight: 700; color: var(--mid); }
+.w-rating span { color: #f5a623; }
+
+.w-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f4;
+}
+
+.w-price {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--peach);
+}
+
+.w-price-sub { font-size: 11px; color: var(--mid); }
+
+.w-cta {
+  background: var(--peach-light);
+  color: var(--peach);
+  border: none;
+  border-radius: 50px;
+  padding: 9px 18px;
+  font-family: 'Nunito';
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.w-cta:hover { background: var(--peach); color: white; }

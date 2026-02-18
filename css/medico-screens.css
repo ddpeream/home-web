@@ -1,0 +1,36 @@
+/* Screen system */
+.screen { display: none; flex-direction: column; min-height: 100vh; animation: fadeIn 0.25s ease; }
+.screen.active { display: flex; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Top nav */
+.top-nav { display: flex; align-items: center; padding: 14px 24px 8px; gap: 14px; flex-shrink: 0; }
+.back-btn { width: 40px; height: 40px; background: var(--surface); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.08); flex-shrink: 0; text-decoration: none; color: var(--ink); }
+.top-nav-title { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; }
+.top-nav-pill { margin-left: auto; background: var(--medical-light); color: var(--medical); font-size: 11px; font-weight: 800; padding: 5px 12px; border-radius: 50px; }
+
+/* Scroll content */
+.scroll-content { flex: 1; overflow-y: auto; padding-bottom: 90px; }
+.scroll-content::-webkit-scrollbar { display: none; }
+
+/* Card section (reusable) */
+.card-section { margin: 16px 24px 0; background: var(--surface); border-radius: var(--radius); padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+.card-title { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.card-title-icon { font-size: 18px; }
+
+/* CTA fixed bar */
+.cta-fixed { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 390px; background: rgba(250,248,245,0.97); backdrop-filter: blur(10px); padding: 16px 24px 32px; border-top: 1px solid rgba(0,0,0,0.06); z-index: 100; }
+.cta-row { display: flex; gap: 12px; align-items: center; }
+.cta-price-num { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 700; color: var(--medical); }
+.cta-price-label { font-size: 11px; color: var(--mid); }
+.cta-btn { flex: 1; background: var(--medical); color: white; border: none; border-radius: 50px; padding: 15px; font-family: 'Nunito'; font-weight: 800; font-size: 15px; cursor: pointer; box-shadow: 0 6px 20px rgba(42,125,225,0.35); transition: all 0.2s; }
+.cta-btn:hover { background: var(--medical-dark); transform: scale(1.02); }
+
+/* Status bar override */
+.medico-page .status-bar { padding: 14px 24px 0; }
+
+/* Nav override for medical color */
+.medico-page .nav-item.active .n-label { color: var(--medical); }
+.medico-page .nav-dot { background: var(--medical); }
+
+.spacer-sm { height: 20px; }

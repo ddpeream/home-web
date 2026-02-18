@@ -1,0 +1,38 @@
+.search-wrap { padding: 0 24px 24px; }
+
+.search-box {
+  background: var(--surface);
+  border-radius: 50px;
+  padding: 4px 4px 4px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: 'Nunito';
+  font-size: 14px;
+  outline: none;
+  padding: 10px 0;
+  color: var(--ink);
+}
+
+.search-input::placeholder { color: var(--soft); }
+
+.search-go {
+  background: var(--peach);
+  border: none;
+  border-radius: 50px;
+  width: 44px;
+  height: 44px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}

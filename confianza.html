@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Servi – Confianza</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/status-bar.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/confianza.css">
+</head>
+<body>
+
+<div class="status-bar"><span>9:41</span><span>🔋 ◀</span></div>
+
+<div style="padding:14px 24px 0;">
+  <div style="font-family:'Fraunces',serif; font-size:24px; font-weight:700;">Confianza</div>
+  <div style="font-size:13px; color:var(--mid); margin-top:4px;">Tu protección legal en cada servicio</div>
+</div>
+
+<!-- TRUST SCORE -->
+<div class="trust-hero">
+  <div class="trust-score" data-target="96">0%</div>
+  <div class="trust-score-label">Nivel de protección activo</div>
+  <div class="trust-bar-wrap">
+    <div class="trust-bar" data-percent="96" style="width:0%;"></div>
+  </div>
+</div>
+
+<!-- COBERTURAS ACTIVAS -->
+<div class="coverage-section">
+  <div class="coverage-title">🛡️ Coberturas activas</div>
+  <div class="coverage-cards">
+
+    <div class="coverage-card">
+      <div class="cc-top">
+        <div class="cc-left">
+          <div class="cc-icon arl">🏥</div>
+          <div>
+            <div class="cc-name">ARL incluida</div>
+            <div class="cc-sub">Riesgos laborales cubiertos</div>
+          </div>
+        </div>
+        <div class="cc-status active">✓ Activa <span class="cc-expand">▼</span></div>
+      </div>
+      <div class="cc-detail">
+        Todos los trabajadores contratados a través de Servi están cubiertos por una póliza ARL durante el horario de servicio. Esto incluye accidentes de trabajo, enfermedades laborales y traslados. La cobertura se activa automáticamente al confirmar cada contratación.
+      </div>
+    </div>
+
+    <div class="coverage-card">
+      <div class="cc-top">
+        <div class="cc-left">
+          <div class="cc-icon seguro">❤️‍🩹</div>
+          <div>
+            <div class="cc-name">Seguro de vida</div>
+            <div class="cc-sub">Cobertura por turno trabajado</div>
+          </div>
+        </div>
+        <div class="cc-status active">✓ Activa <span class="cc-expand">▼</span></div>
+      </div>
+      <div class="cc-detail">
+        Seguro de vida grupal que cubre a cada trabajador durante su turno. Incluye muerte accidental, incapacidad total y permanente, y gastos médicos por accidente hasta $50.000.000 COP. Aseguradora: Seguros Bolívar.
+      </div>
+    </div>
+
+    <div class="coverage-card">
+      <div class="cc-top">
+        <div class="cc-left">
+          <div class="cc-icon contrato">📋</div>
+          <div>
+            <div class="cc-name">Contrato digital</div>
+            <div class="cc-sub">Firma electrónica válida</div>
+          </div>
+        </div>
+        <div class="cc-status active">✓ Activa <span class="cc-expand">▼</span></div>
+      </div>
+      <div class="cc-detail">
+        Cada servicio genera un contrato digital con firma electrónica válida bajo la Ley 527 de 1999. Incluye términos del servicio, horario, tarifa acordada y obligaciones de ambas partes. Puedes descargar tus contratos en cualquier momento.
+      </div>
+    </div>
+
+    <div class="coverage-card">
+      <div class="cc-top">
+        <div class="cc-left">
+          <div class="cc-icon datos">🔒</div>
+          <div>
+            <div class="cc-name">Datos protegidos</div>
+            <div class="cc-sub">Ley 1581 Habeas Data</div>
+          </div>
+        </div>
+        <div class="cc-status active">✓ Activa <span class="cc-expand">▼</span></div>
+      </div>
+      <div class="cc-detail">
+        Tus datos personales y los de los trabajadores son tratados como datos sensibles bajo la Ley 1581. Cifrado end-to-end en chats, datos de salud solo visibles para profesionales médicos, y derecho a solicitar eliminación total en cualquier momento.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CONTRATOS RECIENTES -->
+<div class="coverage-section">
+  <div class="coverage-title">📄 Contratos recientes</div>
+  <div class="coverage-cards">
+    <div class="contract-item">
+      <div class="ci-avatar bg-peach">👩‍🍳</div>
+      <div class="ci-info">
+        <div class="ci-name">María Rodríguez – Hogar</div>
+        <div class="ci-date">18 feb 2025 · Contrato #SRV-2847</div>
+      </div>
+      <div class="ci-status vigente">Vigente</div>
+    </div>
+    <div class="contract-item">
+      <div class="ci-avatar bg-sky">👨‍⚕️</div>
+      <div class="ci-info">
+        <div class="ci-name">Dr. Andrés Castillo – Consulta</div>
+        <div class="ci-date">19 feb 2025 · Contrato #SRV-2851</div>
+      </div>
+      <div class="ci-status vigente">Vigente</div>
+    </div>
+    <div class="contract-item">
+      <div class="ci-avatar bg-sage">🔧</div>
+      <div class="ci-info">
+        <div class="ci-name">Luis Herrera – Electricista</div>
+        <div class="ci-date">15 feb 2025 · Contrato #SRV-2803</div>
+      </div>
+      <div class="ci-status" style="background:var(--bg); color:var(--mid);">Cerrado</div>
+    </div>
+  </div>
+</div>
+
+<!-- INFO -->
+<div class="info-banner">
+  <div class="ib-icon">⚖️</div>
+  <div class="ib-text"><strong>Asesoría legal 24/7.</strong> Si tienes cualquier inconveniente con un servicio, nuestro equipo jurídico te asiste sin costo adicional. Escríbenos al chat de soporte.</div>
+</div>
+
+<div class="spacer" style="height:100px;"></div>
+
+<nav class="bottom-nav">
+  <a class="nav-item" href="index.html"><span class="n-icon">🏠</span><div class="nav-dot"></div><span class="n-label">Inicio</span></a>
+  <a class="nav-item" href="actividad.html"><span class="n-icon">📋</span><div class="nav-dot"></div><span class="n-label">Actividad</span></a>
+  <a class="nav-item nav-center active" href="confianza.html"><span class="n-icon">🛡️</span><div class="nav-dot"></div><span class="n-label">Confianza</span></a>
+  <a class="nav-item" href="mensajes.html"><span class="n-icon">💬</span><div class="nav-dot"></div><span class="n-label">Mensajes</span></a>
+  <a class="nav-item" href="perfil.html"><span class="n-icon">👤</span><div class="nav-dot"></div><span class="n-label">Perfil</span></a>
+</nav>
+
+<script src="js/confianza.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* Trust score hero */
+.trust-hero {
+  margin: 16px 24px 0;
+  background: linear-gradient(135deg, var(--sage-light), #e8f1fd);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.trust-hero::after {
+  content: '\1F6E1';
+  font-size: 120px;
+  position: absolute;
+  right: -20px;
+  bottom: -30px;
+  opacity: 0.06;
+  pointer-events: none;
+}
+.trust-score {
+  font-family: 'Fraunces', serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--sage);
+  line-height: 1;
+}
+.trust-score-label { font-size: 13px; color: var(--mid); margin-top: 4px; font-weight: 600; }
+.trust-bar-wrap { margin-top: 16px; background: rgba(255,255,255,0.6); border-radius: 50px; height: 8px; overflow: hidden; }
+.trust-bar { height: 100%; background: var(--sage); border-radius: 50px; transition: width 1s ease; }
+
+/* Coverage cards */
+.coverage-section { padding: 20px 24px 0; }
+.coverage-title {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coverage-cards { display: flex; flex-direction: column; gap: 12px; }
+
+.coverage-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.coverage-card:active { transform: scale(0.98); }
+
+.cc-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.cc-left { display: flex; align-items: center; gap: 12px; }
+.cc-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.cc-icon.arl { background: var(--sage-light); }
+.cc-icon.seguro { background: var(--sky-light); }
+.cc-icon.contrato { background: var(--lav-light); }
+.cc-icon.datos { background: var(--peach-light); }
+
+.cc-name { font-weight: 800; font-size: 14px; }
+.cc-sub { font-size: 11px; color: var(--mid); margin-top: 2px; }
+
+.cc-status {
+  font-size: 10px; font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 50px;
+  display: flex; align-items: center; gap: 4px;
+}
+.cc-status.active { background: var(--sage-light); color: var(--sage); }
+
+.cc-detail {
+  display: none;
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 12px;
+  color: var(--mid);
+  line-height: 1.7;
+}
+.cc-detail.open { display: block; }
+.cc-expand { font-size: 12px; transition: transform 0.2s; display: inline-block; }
+.cc-expand.open { transform: rotate(180deg); }
+
+/* Contracts list */
+.contract-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.contract-item:active { transform: scale(0.98); }
+
+.ci-avatar {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.ci-info { flex: 1; }
+.ci-name { font-weight: 800; font-size: 13px; }
+.ci-date { font-size: 11px; color: var(--mid); margin-top: 2px; }
+.ci-status {
+  font-size: 9px; font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 50px;
+}
+.ci-status.vigente { background: var(--sage-light); color: var(--sage); }
+.ci-status.vencido { background: var(--red-soft); color: var(--red); }
+
+/* Info banner */
+.info-banner {
+  margin: 20px 24px;
+  background: var(--sage-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.ib-icon { font-size: 20px; flex-shrink: 0; }
+.ib-text { font-size: 12px; color: var(--ink); line-height: 1.5; }
+.ib-text strong { font-weight: 800; }

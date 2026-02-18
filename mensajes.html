@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Servi – Mensajes</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/status-bar.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/mensajes.css">
+</head>
+<body>
+
+<!-- CHAT LIST VIEW -->
+<div id="chat-list-view">
+
+  <div class="status-bar"><span>9:41</span><span>🔋 ◀</span></div>
+
+  <div style="padding:14px 24px 0;">
+    <div style="font-family:'Fraunces',serif; font-size:24px; font-weight:700;">Mensajes</div>
+    <div style="font-size:13px; color:var(--mid); margin-top:4px;">Conversa con tus profesionales</div>
+  </div>
+
+  <div class="msg-search">
+    <div class="msg-search-box">
+      <span class="msg-search-icon">🔍</span>
+      <input class="msg-search-input" placeholder="Buscar conversación...">
+    </div>
+  </div>
+
+  <div class="chat-list">
+    <div class="chat-item unread" data-chat="maria">
+      <div class="chat-avatar-wrap">
+        <div class="chat-avatar bg-peach">👩‍🍳</div>
+        <div class="chat-online"></div>
+      </div>
+      <div class="chat-content">
+        <div class="chat-name">María Rodríguez</div>
+        <div class="chat-preview">Perfecto, llevo los implementos de limpieza</div>
+      </div>
+      <div class="chat-meta">
+        <span class="chat-time">9:18 am</span>
+        <span class="chat-badge">2</span>
+      </div>
+    </div>
+
+    <div class="chat-item unread" data-chat="andres">
+      <div class="chat-avatar-wrap">
+        <div class="chat-avatar bg-sky">👨‍⚕️</div>
+        <div class="chat-online"></div>
+      </div>
+      <div class="chat-content">
+        <div class="chat-name">Dr. Andrés Castillo</div>
+        <div class="chat-preview">Recuerde tener a la mano su documento de identidad...</div>
+      </div>
+      <div class="chat-meta">
+        <span class="chat-time">4:33 pm</span>
+        <span class="chat-badge">1</span>
+      </div>
+    </div>
+
+    <div class="chat-item" data-chat="carlos">
+      <div class="chat-avatar-wrap">
+        <div class="chat-avatar bg-sky">🐕‍🦺</div>
+      </div>
+      <div class="chat-content">
+        <div class="chat-name">Carlos Mejía</div>
+        <div class="chat-preview">Perfecto Carlos, te abrimos ya</div>
+      </div>
+      <div class="chat-meta">
+        <span class="chat-time">Ayer</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="spacer" style="height:100px;"></div>
+
+  <nav class="bottom-nav">
+    <a class="nav-item" href="index.html"><span class="n-icon">🏠</span><div class="nav-dot"></div><span class="n-label">Inicio</span></a>
+    <a class="nav-item" href="actividad.html"><span class="n-icon">📋</span><div class="nav-dot"></div><span class="n-label">Actividad</span></a>
+    <a class="nav-item nav-center" href="confianza.html"><span class="n-icon">🛡️</span><div class="nav-dot"></div><span class="n-label">Confianza</span></a>
+    <a class="nav-item active" href="mensajes.html"><span class="n-icon">💬</span><div class="nav-dot"></div><span class="n-label">Mensajes</span></a>
+    <a class="nav-item" href="perfil.html"><span class="n-icon">👤</span><div class="nav-dot"></div><span class="n-label">Perfil</span></a>
+  </nav>
+</div>
+
+<!-- CHAT DETAIL VIEW -->
+<div class="chat-detail" id="chat-detail-view">
+  <div class="status-bar"><span>9:41</span><span>🔋 ◀</span></div>
+
+  <div class="chat-header">
+    <button id="chat-back" style="background:var(--surface); border:none; border-radius:50%; width:36px; height:36px; font-size:18px; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.08);">←</button>
+    <div id="chat-detail-avatar" class="chat-header-avatar bg-peach">👩‍🍳</div>
+    <div>
+      <div id="chat-detail-name" class="chat-header-name">María Rodríguez</div>
+      <div class="chat-header-status">● En línea</div>
+    </div>
+  </div>
+
+  <div class="chat-messages" id="chat-messages">
+  </div>
+
+  <div class="chat-input-bar">
+    <input class="chat-input" id="chat-msg-input" placeholder="Escribe un mensaje...">
+    <button class="chat-send" id="chat-send-btn">➤</button>
+  </div>
+</div>
+
+<script src="js/mensajes.js"></script>
+</body>
+</html>

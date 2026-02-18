@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:blog.thumbtack.com)",
+      "WebFetch(domain:apps.apple.com)",
+      "WebFetch(domain:miracuves.com)",
+      "WebFetch(domain:www.omriron.design)",
+      "WebFetch(domain:www.bighuman.com)",
+      "WebFetch(domain:support.taskrabbit.com)",
+      "WebFetch(domain:www.excellentwebworld.com)",
+      "WebFetch(domain:oyelabs.com)"
+    ]
+  }
+}

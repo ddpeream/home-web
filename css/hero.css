@@ -1,0 +1,51 @@
+.hero {
+  background: linear-gradient(135deg, #fde8d8, #daeeff);
+  border-radius: var(--radius);
+  margin: 0 24px 24px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '\1F3E1';
+  font-size: 80px;
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  transform: rotate(10deg);
+  opacity: 0.3;
+}
+
+.hero h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  max-width: 220px;
+}
+
+.hero p {
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.5;
+  max-width: 200px;
+  margin-bottom: 18px;
+}
+
+.hero-btn {
+  background: var(--peach);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-family: 'Nunito';
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(242,169,126,0.4);
+}

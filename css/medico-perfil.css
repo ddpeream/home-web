@@ -1,0 +1,57 @@
+/* Hero profile */
+.med-hero { background: linear-gradient(160deg, var(--medical-light) 0%, #fff 60%); padding: 24px 24px 20px; position: relative; overflow: hidden; }
+.med-hero::after { content: '\1FA7A'; font-size: 100px; position: absolute; right: -15px; top: -10px; opacity: 0.08; transform: rotate(20deg); pointer-events: none; }
+.med-hero-row { display: flex; gap: 18px; align-items: flex-start; margin-bottom: 18px; }
+.med-avatar { width: 80px; height: 80px; border-radius: 22px; background: var(--medical-light); display: flex; align-items: center; justify-content: center; font-size: 44px; flex-shrink: 0; border: 3px solid var(--medical); }
+.med-info { flex: 1; }
+.med-name { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; line-height: 1.2; margin-bottom: 4px; }
+.med-specialty { font-size: 13px; color: var(--mid); margin-bottom: 10px; }
+.med-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.badge { font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 50px; display: inline-flex; align-items: center; gap: 4px; }
+.badge-rethus { background: var(--medical); color: white; }
+.badge-online { background: var(--sage-light); color: var(--sage); }
+.badge-legal { background: var(--lav-light); color: var(--lavender); }
+
+/* Stats row */
+.stats-row { display: flex; gap: 0; background: var(--surface); border-radius: var(--radius-sm); overflow: hidden; border: 1px solid rgba(0,0,0,0.06); }
+.stat-item { flex: 1; text-align: center; padding: 14px 8px; position: relative; }
+.stat-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 20%; height: 60%; width: 1px; background: rgba(0,0,0,0.08); }
+.stat-num { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; color: var(--ink); }
+.stat-label { font-size: 10px; color: var(--mid); margin-top: 2px; font-weight: 600; }
+
+/* About */
+.about-text { font-size: 13px; color: var(--mid); line-height: 1.7; }
+
+/* Modalities */
+.modalities { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.modality-card { border-radius: var(--radius-sm); padding: 14px; display: flex; flex-direction: column; gap: 6px; cursor: pointer; border: 2px solid transparent; transition: all 0.2s; }
+.modality-card.domicilio { background: var(--peach-light); }
+.modality-card.virtual { background: var(--sky-light); }
+.modality-card.selected { border-color: var(--medical); box-shadow: 0 0 0 3px rgba(42,125,225,0.15); }
+.mod-icon { font-size: 28px; }
+.mod-name { font-weight: 800; font-size: 14px; }
+.mod-desc { font-size: 11px; color: var(--mid); line-height: 1.4; }
+.mod-price { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; color: var(--medical); margin-top: 4px; }
+
+/* Availability */
+.avail-grid { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin: 0 -2px; padding: 2px; }
+.avail-grid::-webkit-scrollbar { display: none; }
+.day-chip { flex-shrink: 0; text-align: center; background: var(--bg); border-radius: 12px; padding: 10px 14px; cursor: pointer; border: 2px solid transparent; transition: all 0.2s; }
+.day-chip.active { background: var(--medical); border-color: var(--medical); }
+.day-chip.active .day-name, .day-chip.active .day-num { color: white; }
+.day-chip.unavail { opacity: 0.4; cursor: not-allowed; }
+.day-name { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--mid); letter-spacing: 0.5px; }
+.day-num { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; margin-top: 2px; }
+.time-slots { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.time-slot { background: var(--bg); border-radius: 50px; padding: 7px 14px; font-size: 12px; font-weight: 700; cursor: pointer; border: 1.5px solid transparent; transition: all 0.2s; }
+.time-slot.active { background: var(--medical-light); color: var(--medical); border-color: var(--medical); }
+.time-slot.taken { text-decoration: line-through; color: var(--soft); cursor: not-allowed; }
+
+/* Legal verification */
+.legal-verify { margin: 16px 24px 0; background: linear-gradient(135deg, var(--medical-light), var(--lav-light)); border-radius: var(--radius); padding: 18px; }
+.lv-title { font-weight: 800; font-size: 14px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.lv-items { display: flex; flex-direction: column; gap: 8px; }
+.lv-item { display: flex; align-items: center; gap: 10px; }
+.lv-dot { width: 20px; height: 20px; border-radius: 50%; background: var(--sage); display: flex; align-items: center; justify-content: center; color: white; font-size: 11px; font-weight: 800; flex-shrink: 0; }
+.lv-text { font-size: 12px; color: var(--ink); font-weight: 600; }
+.lv-sub { font-size: 10px; color: var(--mid); margin-top: 1px; }

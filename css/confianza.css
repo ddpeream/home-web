@@ -28,6 +28,55 @@
 .trust-bar-wrap { margin-top: 16px; background: rgba(255,255,255,0.6); border-radius: 50px; height: 8px; overflow: hidden; }
 .trust-bar { height: 100%; background: var(--sage); border-radius: 50px; transition: width 1s ease; }
 
+/* How it works */
+.how-it-works {
+  margin: 16px 24px 0;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+.hiw-title {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.hiw-sub {
+  font-size: 12px;
+  color: var(--mid);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+.hiw-steps { display: flex; flex-direction: column; gap: 14px; }
+.hiw-step { display: flex; gap: 12px; align-items: flex-start; }
+.hiw-step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.hiw-step-text { display: flex; flex-direction: column; gap: 2px; }
+.hiw-step-text strong { font-size: 13px; font-weight: 800; color: var(--ink); }
+.hiw-step-text span { font-size: 11px; color: var(--mid); line-height: 1.4; }
+.hiw-note {
+  margin-top: 18px;
+  padding: 12px 14px;
+  background: var(--sage-light);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  color: var(--ink);
+  line-height: 1.5;
+  font-weight: 600;
+}
+
 /* Coverage cards */
 .coverage-section { padding: 20px 24px 0; }
 .coverage-title {

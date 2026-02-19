@@ -18,6 +18,7 @@
 </head>
 <body>
 <script src="js/auth.js"></script>
+<script src="js/data.js"></script>
 
 <div class="status-bar">
   <span>9:41</span>
@@ -40,12 +41,12 @@
 <div class="hero">
   <h2>Personas de confianza para tu hogar</h2>
   <p>Todos verificados, con seguros y contratos legales desde el primer día.</p>
-  <button class="hero-btn">Explorar servicios →</button>
+  <button class="hero-btn" id="btn-explorar">Explorar servicios →</button>
 </div>
 
 <div class="search-wrap">
   <div class="search-box">
-    <input class="search-input" placeholder="Busca lo que necesitas...">
+    <input class="search-input" id="search-input" placeholder="Busca lo que necesitas...">
     <button class="search-go">🔍</button>
   </div>
 </div>
@@ -63,125 +64,60 @@
   </div>
 </div>
 
-<div class="section-title">
-  Categorías <span class="see-all">Ver todas</span>
+<div class="section-title" id="categorias">
+  Categorías <span class="see-all" id="btn-ver-todas">Ver todas</span>
 </div>
 <div class="cats-scroll">
-  <div class="cat-pill active"><span class="cat-pill-emoji">🏠</span><span class="cat-pill-label">Hogar</span></div>
-  <div class="cat-pill"><span class="cat-pill-emoji">🐕</span><span class="cat-pill-label">Mascotas</span></div>
-  <div class="cat-pill"><span class="cat-pill-emoji">🔧</span><span class="cat-pill-label">Técnico</span></div>
-  <div class="cat-pill"><span class="cat-pill-emoji">👶</span><span class="cat-pill-label">Cuidado</span></div>
-  <div class="cat-pill"><span class="cat-pill-emoji">🌿</span><span class="cat-pill-label">Jardín</span></div>
-  <div class="cat-pill"><span class="cat-pill-emoji">🚗</span><span class="cat-pill-label">Conductor</span></div>
+  <div class="cat-pill active" data-category="todos"><span class="cat-pill-emoji">⭐</span><span class="cat-pill-label">Todos</span></div>
+  <div class="cat-pill" data-category="hogar"><span class="cat-pill-emoji">🏠</span><span class="cat-pill-label">Hogar</span></div>
+  <div class="cat-pill" data-category="mascotas"><span class="cat-pill-emoji">🐕</span><span class="cat-pill-label">Mascotas</span></div>
+  <div class="cat-pill" data-category="tecnico"><span class="cat-pill-emoji">🔧</span><span class="cat-pill-label">Técnico</span></div>
+  <div class="cat-pill" data-category="cuidado"><span class="cat-pill-emoji">👶</span><span class="cat-pill-label">Cuidado</span></div>
+  <div class="cat-pill" data-category="jardin"><span class="cat-pill-emoji">🌿</span><span class="cat-pill-label">Jardín</span></div>
+  <div class="cat-pill" data-category="conductor"><span class="cat-pill-emoji">🚗</span><span class="cat-pill-label">Conductor</span></div>
   <a href="medico.html" class="cat-pill" style="text-decoration:none;"><span class="cat-pill-emoji">🩺</span><span class="cat-pill-label">Médico</span></a>
 </div>
 
 <div class="section-title">
-  Disponibles ahora <span class="see-all">Filtrar</span>
+  Disponibles ahora <span class="see-all" id="btn-filtrar">Filtrar</span>
 </div>
 
-<div class="workers-grid">
-  <div class="worker-card">
-    <div class="avatar-wrap">
-      <div class="w-avatar bg-peach">👩‍🍳</div>
-      <div class="online-dot"></div>
-    </div>
-    <div class="w-info">
-      <div class="w-name">María Rodríguez</div>
-      <div class="w-role">Empleada del Hogar · 8 años</div>
-      <div class="w-row">
-        <div class="w-badges">
-          <span class="w-badge wb-arl">ARL ✓</span>
-          <span class="w-badge wb-seg">Seguro ✓</span>
-        </div>
-        <div class="w-rating"><span>★ 4.9</span> (127)</div>
-      </div>
-      <div class="w-footer">
-        <div>
-          <div class="w-price">$85k</div>
-          <div class="w-price-sub">por día</div>
-        </div>
-        <button class="w-cta">Contratar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="worker-card">
-    <div class="avatar-wrap">
-      <div class="w-avatar bg-sky">🐕‍🦺</div>
-      <div class="online-dot"></div>
-    </div>
-    <div class="w-info">
-      <div class="w-name">Carlos Mejía</div>
-      <div class="w-role">Paseador de Perros · 3 años</div>
-      <div class="w-row">
-        <div class="w-badges">
-          <span class="w-badge wb-arl">ARL ✓</span>
-          <span class="w-badge wb-seg">Seguro ✓</span>
-        </div>
-        <div class="w-rating"><span>★ 5.0</span> (48)</div>
-      </div>
-      <div class="w-footer">
-        <div>
-          <div class="w-price">$35k</div>
-          <div class="w-price-sub">por paseo</div>
-        </div>
-        <button class="w-cta">Contratar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="worker-card">
-    <div class="avatar-wrap">
-      <div class="w-avatar bg-sage">🔧</div>
-      <div class="online-dot" style="background:#f5a623;"></div>
-    </div>
-    <div class="w-info">
-      <div class="w-name">Luis Herrera</div>
-      <div class="w-role">Técnico Electricista · 6 años</div>
-      <div class="w-row">
-        <div class="w-badges">
-          <span class="w-badge wb-arl">ARL ✓</span>
-          <span class="w-badge wb-seg">Seguro ✓</span>
-        </div>
-        <div class="w-rating"><span>★ 4.7</span> (93)</div>
-      </div>
-      <div class="w-footer">
-        <div>
-          <div class="w-price">$60k</div>
-          <div class="w-price-sub">por visita</div>
-        </div>
-        <button class="w-cta">Contratar</button>
-      </div>
-    </div>
-  </div>
+<div class="workers-grid" id="workers-grid">
+  <!-- Workers rendered by home.js -->
 </div>
 
-<div class="section-title">Coberturas Legales</div>
+<!-- Empty state -->
+<div id="empty-state" style="display:none; text-align:center; padding:40px 24px;">
+  <div style="font-size:48px; margin-bottom:12px;">🔍</div>
+  <div style="font-family:'Fraunces',serif; font-size:18px; font-weight:700; margin-bottom:6px;">Sin resultados</div>
+  <div style="font-size:13px; color:var(--mid);">No encontramos trabajadores con ese criterio. Intenta con otra búsqueda.</div>
+</div>
+
+<div class="section-title">Coberturas Legales <span class="see-all legal-included-badge">Incluidas en cada pago</span></div>
 <div class="legal-bottom">
   <div class="legal-grid">
     <div class="legal-tile">
       <div class="lt-icon">🛡️</div>
       <div class="lt-title">ARL incluida</div>
-      <div class="lt-sub">Riesgos Laborales en cada contratación</div>
+      <div class="lt-sub">Se activa automáticamente con cada contratación. Sin costo adicional.</div>
       <span class="lt-arrow">→</span>
     </div>
     <div class="legal-tile">
       <div class="lt-icon">📋</div>
       <div class="lt-title">Contrato digital</div>
-      <div class="lt-sub">Firma en segundos, válido legalmente</div>
+      <div class="lt-sub">Se genera al instante con firma electrónica válida (Ley 527/1999).</div>
       <span class="lt-arrow">→</span>
     </div>
     <div class="legal-tile">
       <div class="lt-icon">❤️‍🩹</div>
       <div class="lt-title">Seguro de vida</div>
-      <div class="lt-sub">Cobertura total por turno trabajado</div>
+      <div class="lt-sub">Cobertura automática por turno trabajado. Incluida en la comisión.</div>
       <span class="lt-arrow">→</span>
     </div>
     <div class="legal-tile" style="background:var(--lav-light);">
       <div class="lt-icon">⚖️</div>
-      <div class="lt-title">Asesoría 24/7</div>
-      <div class="lt-sub">Soporte jurídico laboral siempre</div>
+      <div class="lt-title">Verificación total</div>
+      <div class="lt-sub">Todos los profesionales verificados antes de entrar a la plataforma.</div>
       <span class="lt-arrow">→</span>
     </div>
   </div>

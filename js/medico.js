@@ -4,6 +4,29 @@ function goTo(screenId) {
   window.scrollTo(0, 0);
 }
 
+function goToPago() {
+  var selectedMod = document.querySelector('.modality-card.selected');
+  var price = 85000;
+  var tipo = 'Domicilio';
+  if (selectedMod) {
+    price = parseInt(selectedMod.querySelector('.mod-price').textContent.replace(/[^0-9]/g, ''));
+    tipo = selectedMod.querySelector('.mod-name').textContent;
+  }
+  sessionStorage.setItem('servi_pago', JSON.stringify({
+    name: 'Dr. Andrés Castillo',
+    role: 'Médico General',
+    emoji: '👨‍⚕️',
+    bg: 'bg-sky',
+    price: price,
+    priceSub: 'consulta ' + tipo.toLowerCase(),
+    date: 'Mar 18 feb',
+    time: '10:00 am',
+    location: tipo,
+    from: 'medico.html'
+  }));
+  window.location.href = 'pago.html';
+}
+
 function selectModality(el) {
   document.querySelectorAll('.modality-card').forEach(function(c) { c.classList.remove('selected'); });
   el.classList.add('selected');

@@ -1,0 +1,274 @@
+/* ═══════════════════════════════════
+   PAGO — Screens, Layout & Resumen
+═══════════════════════════════════ */
+
+/* Screen system */
+.screen { display: none; flex-direction: column; min-height: 100vh; animation: pagoIn 0.3s ease; }
+.screen.active { display: flex; }
+@keyframes pagoIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Top nav */
+.pago-nav {
+  display: flex;
+  align-items: center;
+  padding: 14px 24px 8px;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.pago-back {
+  width: 40px; height: 40px;
+  background: var(--surface);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+  color: var(--ink);
+  transition: transform 0.15s;
+}
+.pago-back:active { transform: scale(0.9); }
+.pago-nav-title {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.pago-nav-secure {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--sage);
+  background: var(--sage-light);
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+/* Scroll area */
+.pago-scroll { flex: 1; overflow-y: auto; padding-bottom: 110px; }
+.pago-scroll::-webkit-scrollbar { display: none; }
+
+/* Step indicator */
+.pago-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+}
+.pago-step {
+  width: 28px; height: 4px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.pago-step.active { width: 44px; background: var(--peach); }
+.pago-step.done { background: var(--sage); }
+
+/* Card container */
+.pago-card {
+  margin: 14px 24px 0;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+.pago-card-title {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* CTA bar */
+.pago-cta {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  background: rgba(250,248,245,0.97);
+  backdrop-filter: blur(10px);
+  padding: 16px 24px 32px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  z-index: 100;
+}
+.pago-cta-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.pago-cta-total-label { font-size: 11px; color: var(--mid); }
+.pago-cta-total-amount {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.pago-cta-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--peach);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Nunito';
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(242,169,126,0.35);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.pago-cta-btn:hover { transform: scale(1.02); }
+.pago-cta-btn:active { transform: scale(0.98); }
+.pago-cta-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.pago-cta-btn-pay { flex: 1; }
+
+/* Info banner */
+.pago-info {
+  margin: 14px 24px 0;
+  background: var(--sage-light);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.pago-info-icon { font-size: 18px; flex-shrink: 0; }
+.pago-info-text { font-size: 12px; color: var(--ink); line-height: 1.5; }
+.pago-info-text strong { font-weight: 800; }
+
+/* ─── Service Summary ─── */
+.pago-service {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.ps-avatar {
+  width: 52px; height: 52px;
+  border-radius: 16px;
+  background: var(--peach-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+.ps-name {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.ps-role { font-size: 12px; color: var(--mid); margin-top: 2px; }
+.ps-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.ps-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink);
+}
+.ps-detail-icon { font-size: 16px; width: 20px; text-align: center; }
+
+/* BG utility classes (shared with workers) */
+.bg-peach { background: var(--peach-light); }
+.bg-sky { background: var(--sky-light); }
+.bg-sage { background: var(--sage-light); }
+.bg-lav { background: var(--lav-light); }
+
+/* ─── Price Breakdown ─── */
+.price-rows { display: flex; flex-direction: column; gap: 12px; }
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--mid);
+}
+.price-row span:last-child { font-weight: 700; color: var(--ink); }
+.price-divider { height: 1px; background: rgba(0,0,0,0.06); margin: 4px 0; }
+.total-row span { font-size: 16px; }
+.total-row span:last-child {
+  color: var(--peach);
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+}
+.promo-text { color: var(--sage); }
+.promo-amount { color: var(--sage); }
+
+/* ─── Coupon ─── */
+.coupon-wrap { display: flex; gap: 8px; }
+.coupon-input {
+  flex: 1;
+  background: var(--bg);
+  border: 1.5px solid rgba(0,0,0,0.08);
+  border-radius: 50px;
+  padding: 12px 18px;
+  font-family: 'Nunito';
+  font-size: 13px;
+  color: var(--ink);
+  outline: none;
+  transition: border 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.coupon-input:focus { border-color: var(--peach); }
+.coupon-input::placeholder { color: var(--soft); text-transform: none; letter-spacing: 0; }
+.coupon-btn {
+  background: var(--ink);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-family: 'Nunito';
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.coupon-btn:active { transform: scale(0.95); }
+.coupon-btn.applied { background: var(--sage); }
+
+/* ─── Powered By ─── */
+.pago-powered { text-align: center; padding: 20px 24px 0; }
+.pago-powered-text {
+  font-size: 10px;
+  color: var(--soft);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.pago-powered-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.powered-logo {
+  font-size: 11px;
+  color: var(--mid);
+  font-weight: 800;
+  background: var(--bg);
+  padding: 4px 12px;
+  border-radius: 50px;
+}

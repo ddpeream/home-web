@@ -21,17 +21,47 @@ if (searchInput && searchBox) {
   });
 }
 
-// Worker card CTA hover feedback
+// Worker card tap feedback
 document.querySelectorAll('.worker-card').forEach(function(card) {
   card.addEventListener('click', function() {
-    var cta = card.querySelector('.w-cta');
-    if (cta) {
-      cta.style.background = 'var(--peach)';
-      cta.style.color = 'white';
-      setTimeout(function() {
-        cta.style.background = '';
-        cta.style.color = '';
-      }, 200);
-    }
+    card.style.transform = 'scale(0.98)';
+    setTimeout(function() { card.style.transform = ''; }, 200);
+  });
+});
+
+// "Contratar" button → payment flow
+document.querySelectorAll('.w-cta').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+
+    var card = btn.closest('.worker-card');
+    var name = card.querySelector('.w-name').textContent;
+    var roleText = card.querySelector('.w-role').textContent;
+    var role = roleText.split('·')[0].trim();
+    var emoji = card.querySelector('.w-avatar').textContent.trim();
+    var avatarEl = card.querySelector('.w-avatar');
+    var bg = '';
+    avatarEl.classList.forEach(function(c) { if (c.startsWith('bg-')) bg = c; });
+    var priceText = card.querySelector('.w-price').textContent;
+    var priceNum = parseInt(priceText.replace(/[^0-9]/g, '')) * 1000;
+    var priceSub = card.querySelector('.w-price-sub').textContent;
+
+    sessionStorage.setItem('servi_pago', JSON.stringify({
+      name: name,
+      role: role,
+      emoji: emoji,
+      bg: bg,
+      price: priceNum,
+      priceSub: priceSub,
+      date: 'Hoy, 18 feb',
+      time: '8:00 am - 4:00 pm',
+      location: 'Tu hogar',
+      from: 'index.html'
+    }));
+
+    btn.style.background = 'var(--peach)';
+    btn.style.color = 'white';
+    btn.textContent = '→';
+    setTimeout(function() { window.location.href = 'pago.html'; }, 300);
   });
 });

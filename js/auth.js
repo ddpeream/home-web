@@ -1,10 +1,20 @@
-// Auth guard — include this on every protected page
+// Auth guard — protect only sensitive pages
 (function() {
   var isLoggedIn = sessionStorage.getItem('servi_auth');
-  var publicPages = ['login.html', 'registro.html'];
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-  if (!isLoggedIn && publicPages.indexOf(currentPage) === -1) {
+  // Public pages can load without session
+  // (index/login/registro/confianza stay open for better UX)
+  var protectedPages = [
+    'actividad.html',
+    'mensajes.html',
+    'perfil.html',
+    'perfil-trabajador.html',
+    'pago.html',
+    'medico.html'
+  ];
+
+  if (!isLoggedIn && protectedPages.indexOf(currentPage) !== -1) {
     window.location.href = 'login.html';
   }
 })();

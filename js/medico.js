@@ -1,6 +1,6 @@
-// ═══════════════════════════════════════
-// MÉDICO — Module Logic
-// ═══════════════════════════════════════
+﻿// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// MÃ‰DICO â€” Module Logic
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 var selectedPrice = 85000;
 var isUrgent = false;
@@ -23,7 +23,7 @@ function formatPrice(num) {
 function updateAgendarPrice() {
   var total = getTotalPrice();
   var btn = document.querySelector('.submit-btn');
-  if (btn) btn.textContent = 'Confirmar y pagar ' + formatPrice(total) + ' →';
+  if (btn) btn.textContent = 'Confirmar y pagar ' + formatPrice(total) + ' â†’';
 
   // Update resumen card price
   var resPrice = document.querySelector('.res-price');
@@ -48,9 +48,9 @@ function goToPago() {
   if (isUrgent) priceSub += ' (urgente)';
 
   sessionStorage.setItem('servi_pago', JSON.stringify({
-    name: 'Dr. Franck Rosales',
-    role: 'Médico General',
-    emoji: '👨‍⚕️',
+    name: 'Dr. Frank Rosales',
+    role: 'MÃ©dico General',
+    emoji: 'ðŸ‘¨â€âš•ï¸',
     bg: 'bg-sky',
     price: total,
     priceSub: priceSub,
@@ -106,7 +106,7 @@ function selectTipo(el) {
   // Update resumen card tipo text
   var resRole = document.querySelector('.res-role');
   if (resRole) {
-    resRole.textContent = 'Mar 18 · 10:00 am · ' + el.querySelector('.tipo-name').textContent;
+    resRole.textContent = 'Mar 18 Â· 10:00 am Â· ' + el.querySelector('.tipo-name').textContent;
   }
 
   updateAgendarPrice();
@@ -139,13 +139,14 @@ document.querySelectorAll('.day-chip:not(.unavail)').forEach(function(chip) {
 var downloadBtn = document.querySelector('.download-btn');
 if (downloadBtn) {
   downloadBtn.addEventListener('click', function() {
-    alert('La descarga de PDF estará disponible próximamente.');
+    alert('La descarga de PDF estarÃ¡ disponible prÃ³ximamente.');
   });
 }
 
-// ─── Hash-based navigation ───
+// â”€â”€â”€ Hash-based navigation â”€â”€â”€
 (function() {
   if (window.location.hash === '#postconsulta') {
     goTo('screen-postconsulta');
   }
 })();
+

@@ -1,4 +1,4 @@
-var chatList = document.getElementById('chat-list-view');
+﻿var chatList = document.getElementById('chat-list-view');
 var chatDetail = document.getElementById('chat-detail-view');
 var backBtn = document.getElementById('chat-back');
 var chatHeaderName = document.getElementById('chat-detail-name');
@@ -10,31 +10,31 @@ var sendBtn = document.getElementById('chat-send-btn');
 // Chat data
 var chats = {
   maria: {
-    name: 'María Rodríguez',
-    emoji: '👩‍🍳',
+    name: 'MarÃ­a RodrÃ­guez',
+    emoji: 'ðŸ‘©â€ðŸ³',
     bg: 'bg-peach',
     messages: [
-      { text: 'Hola, ¿a qué hora llego mañana?', sent: false, time: '9:15 am' },
-      { text: '¡Hola María! A las 8:00 am por favor', sent: true, time: '9:16 am' },
+      { text: 'Hola, Â¿a quÃ© hora llego maÃ±ana?', sent: false, time: '9:15 am' },
+      { text: 'Â¡Hola MarÃ­a! A las 8:00 am por favor', sent: true, time: '9:16 am' },
       { text: 'Perfecto, llevo los implementos de limpieza', sent: false, time: '9:18 am' },
-      { text: 'Genial, muchas gracias 🙌', sent: true, time: '9:18 am' },
+      { text: 'Genial, muchas gracias ðŸ™Œ', sent: true, time: '9:18 am' },
     ]
   },
   carlos: {
-    name: 'Carlos Mejía',
-    emoji: '🐕‍🦺',
+    name: 'Carlos MejÃ­a',
+    emoji: 'ðŸ•â€ðŸ¦º',
     bg: 'bg-sky',
     messages: [
-      { text: '¡Hola! Ya estoy llegando a recoger a Max', sent: false, time: '2:00 pm' },
+      { text: 'Â¡Hola! Ya estoy llegando a recoger a Max', sent: false, time: '2:00 pm' },
       { text: 'Perfecto Carlos, te abrimos ya', sent: true, time: '2:01 pm' },
     ]
   },
   andres: {
-    name: 'Dr. Franck Rosales',
-    emoji: '👨‍⚕️',
+    name: 'Dr. Frank Rosales',
+    emoji: 'ðŸ‘¨â€âš•ï¸',
     bg: 'bg-sky',
     messages: [
-      { text: 'Buenas tardes, le confirmo su cita para mañana a las 10:00 am a domicilio.', sent: false, time: '4:30 pm' },
+      { text: 'Buenas tardes, le confirmo su cita para maÃ±ana a las 10:00 am a domicilio.', sent: false, time: '4:30 pm' },
       { text: 'Confirmo doctor, muchas gracias', sent: true, time: '4:32 pm' },
       { text: 'Recuerde tener a la mano su documento de identidad y estar en ayunas si es posible.', sent: false, time: '4:33 pm' },
     ]
@@ -101,10 +101,10 @@ function sendMessage() {
   // Simulate reply
   setTimeout(function() {
     var replies = [
-      'Entendido, gracias 👍',
-      'Perfecto, así quedamos',
+      'Entendido, gracias ðŸ‘',
+      'Perfecto, asÃ­ quedamos',
       'De acuerdo, nos vemos entonces',
-      '¡Listo! Cualquier cosa me escribes',
+      'Â¡Listo! Cualquier cosa me escribes',
     ];
     var reply = replies[Math.floor(Math.random() * replies.length)];
     addMessage(reply, false, timeStr);
@@ -132,3 +132,4 @@ if (searchInput) {
     });
   });
 }
+

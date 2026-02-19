@@ -3,7 +3,7 @@
 // ═══════════════════════════════════════
 
 (function() {
-  var workerId = sessionStorage.getItem('servi_worker_id');
+  var workerId = sessionStorage.getItem('HOGARIUM_worker_id');
   if (!workerId) {
     window.location.href = 'index.html';
     return;
@@ -131,7 +131,7 @@
 
   // Contratar button → pago.html
   document.getElementById('wk-cta-contratar').addEventListener('click', function() {
-    sessionStorage.setItem('servi_pago', JSON.stringify({
+    sessionStorage.setItem('HOGARIUM_pago', JSON.stringify({
       name: w.name,
       role: w.role,
       emoji: w.emoji,

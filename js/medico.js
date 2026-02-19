@@ -1,4 +1,4 @@
-﻿// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // MÃ‰DICO â€” Module Logic
 // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
@@ -47,7 +47,7 @@ function goToPago() {
   var priceSub = 'consulta ' + tipo.toLowerCase();
   if (isUrgent) priceSub += ' (urgente)';
 
-  sessionStorage.setItem('servi_pago', JSON.stringify({
+  sessionStorage.setItem('HOGARIUM_pago', JSON.stringify({
     name: 'Dr. Frank Rosales',
     role: 'MÃ©dico General',
     emoji: 'ðŸ‘¨â€âš•ï¸',

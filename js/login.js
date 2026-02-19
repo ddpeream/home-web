@@ -49,8 +49,8 @@ form.addEventListener('submit', function(e) {
   // Simulate network delay
   setTimeout(function() {
     if (email === VALID_EMAIL && pass === VALID_PASS) {
-      sessionStorage.setItem('servi_auth', 'true');
-      sessionStorage.setItem('servi_user', JSON.stringify({
+      sessionStorage.setItem('HOGARIUM_auth', 'true');
+      sessionStorage.setItem('HOGARIUM_user', JSON.stringify({
         name: 'Deimar Valencia',
         email: email
       }));

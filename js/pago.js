@@ -10,7 +10,7 @@ var comision = 0;
 
 // ─── Initialize ───
 (function() {
-  var raw = sessionStorage.getItem('servi_pago');
+  var raw = sessionStorage.getItem('HOGARIUM_pago');
   if (!raw) {
     window.location.href = 'index.html';
     return;
@@ -180,7 +180,7 @@ document.getElementById('coupon-btn').addEventListener('click', function() {
   var code = document.getElementById('coupon-input').value.trim().toUpperCase();
   var btn = this;
 
-  if (code === 'SERVI10') {
+  if (code === 'HOGARIUM10') {
     var descuento = Math.round(basePrice * 0.10);
     totalAmount = basePrice + comision - descuento;
     document.getElementById('pr-descuento').textContent = '-' + formatPrice(descuento);

@@ -19,8 +19,8 @@ var logoutBtn = document.querySelector('.logout-btn');
 if (logoutBtn) {
   logoutBtn.addEventListener('click', function() {
     if (confirm('¿Seguro que deseas cerrar sesión?')) {
-      sessionStorage.removeItem('servi_auth');
-      sessionStorage.removeItem('servi_user');
+      sessionStorage.removeItem('HOGARIUM_auth');
+      sessionStorage.removeItem('HOGARIUM_user');
       window.location.href = 'login.html';
     }
   });

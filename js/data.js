@@ -2,7 +2,7 @@
 // DATA — Centralized Worker Database
 // ═══════════════════════════════════════
 
-var SERVI_WORKERS = [
+var HOGARIUM_WORKERS = [
   {
     id: 'maria-rodriguez',
     name: 'María Rodríguez',
@@ -212,29 +212,29 @@ var SERVI_WORKERS = [
 
 // Utility: find worker by ID
 function getWorkerById(id) {
-  for (var i = 0; i < SERVI_WORKERS.length; i++) {
-    if (SERVI_WORKERS[i].id === id) return SERVI_WORKERS[i];
+  for (var i = 0; i < HOGARIUM_WORKERS.length; i++) {
+    if (HOGARIUM_WORKERS[i].id === id) return HOGARIUM_WORKERS[i];
   }
   return null;
 }
 
 // Utility: filter workers by category
 function getWorkersByCategory(cat) {
-  if (!cat || cat === 'todos') return SERVI_WORKERS;
+  if (!cat || cat === 'todos') return HOGARIUM_WORKERS;
   var result = [];
-  for (var i = 0; i < SERVI_WORKERS.length; i++) {
-    if (SERVI_WORKERS[i].category === cat) result.push(SERVI_WORKERS[i]);
+  for (var i = 0; i < HOGARIUM_WORKERS.length; i++) {
+    if (HOGARIUM_WORKERS[i].category === cat) result.push(HOGARIUM_WORKERS[i]);
   }
   return result;
 }
 
 // Utility: search workers by name or role
 function searchWorkers(query) {
-  if (!query) return SERVI_WORKERS;
+  if (!query) return HOGARIUM_WORKERS;
   var q = query.toLowerCase();
   var result = [];
-  for (var i = 0; i < SERVI_WORKERS.length; i++) {
-    var w = SERVI_WORKERS[i];
+  for (var i = 0; i < HOGARIUM_WORKERS.length; i++) {
+    var w = HOGARIUM_WORKERS[i];
     if (w.name.toLowerCase().indexOf(q) !== -1 ||
         w.role.toLowerCase().indexOf(q) !== -1 ||
         w.category.toLowerCase().indexOf(q) !== -1) {

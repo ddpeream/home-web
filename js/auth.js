@@ -1,6 +1,6 @@
 // Auth guard — protect only sensitive pages
 (function() {
-  var isLoggedIn = sessionStorage.getItem('servi_auth');
+  var isLoggedIn = sessionStorage.getItem('HOGARIUM_auth');
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
   // Public pages can load without session

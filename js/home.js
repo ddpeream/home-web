@@ -57,7 +57,7 @@ function renderWorkers(workers) {
 
 // ─── Filter workers by category + search ───
 function filterWorkers() {
-  var workers = SERVI_WORKERS;
+  var workers = HOGARIUM_WORKERS;
 
   // Filter by category
   if (currentCategory && currentCategory !== 'todos') {
@@ -88,7 +88,7 @@ function bindWorkerEvents() {
   document.querySelectorAll('.worker-card').forEach(function(card) {
     card.addEventListener('click', function() {
       var workerId = card.getAttribute('data-id');
-      sessionStorage.setItem('servi_worker_id', workerId);
+      sessionStorage.setItem('HOGARIUM_worker_id', workerId);
       card.style.transform = 'scale(0.98)';
       setTimeout(function() {
         window.location.href = 'perfil-trabajador.html';
@@ -107,7 +107,7 @@ function bindWorkerEvents() {
 
       if (!w) return;
 
-      sessionStorage.setItem('servi_pago', JSON.stringify({
+      sessionStorage.setItem('HOGARIUM_pago', JSON.stringify({
         name: w.name,
         role: w.role,
         emoji: w.emoji,

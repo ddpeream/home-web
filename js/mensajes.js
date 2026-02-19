@@ -30,7 +30,7 @@ var chats = {
     ]
   },
   andres: {
-    name: 'Dr. Andrés Castillo',
+    name: 'Dr. Franck Rosales',
     emoji: '👨‍⚕️',
     bg: 'bg-sky',
     messages: [

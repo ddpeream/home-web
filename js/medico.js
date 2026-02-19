@@ -48,7 +48,7 @@ function goToPago() {
   if (isUrgent) priceSub += ' (urgente)';
 
   sessionStorage.setItem('servi_pago', JSON.stringify({
-    name: 'Dr. Andrés Castillo',
+    name: 'Dr. Franck Rosales',
     role: 'Médico General',
     emoji: '👨‍⚕️',
     bg: 'bg-sky',

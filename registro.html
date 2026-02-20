@@ -175,10 +175,10 @@
       </div>
 
       <div class="auth-field">
-        <label class="auth-label">Hoja de vida (URL temporal)</label>
+        <label class="auth-label">Hoja de vida (PDF)</label>
         <div class="auth-input-wrap">
           <span class="auth-input-icon">📄</span>
-          <input class="auth-input" id="reg-cv-url" type="url" placeholder="https://.../hv.pdf">
+          <input class="auth-input" id="reg-cv-file" type="file" accept="application/pdf,.pdf">
         </div>
       </div>
     </div>
@@ -291,11 +291,17 @@
         ],
         service_zones: document.getElementById('reg-service-zones').value.split(',').map(function(x){ return x.trim(); }).filter(Boolean),
         availability_text: document.getElementById('reg-availability').value.trim(),
-        cv_url: document.getElementById('reg-cv-url').value.trim()
+        cv_file_name: ''
       };
 
-      if (!payload.worker_profile.main_category || !payload.worker_profile.role_title || !payload.worker_profile.about_short || !payload.worker_profile.services[0].name || !payload.worker_profile.services[0].base_price || payload.worker_profile.service_zones.length === 0 || !payload.worker_profile.availability_text || !payload.worker_profile.cv_url) {
-        return showError('Completa todos los campos de trabajador para continuar.');
+      var cvFileInput = document.getElementById('reg-cv-file');
+      var cvFile = cvFileInput && cvFileInput.files ? cvFileInput.files[0] : null;
+      if (cvFile) {
+        payload.worker_profile.cv_file_name = cvFile.name;
+      }
+
+      if (!payload.worker_profile.main_category || !payload.worker_profile.role_title || !payload.worker_profile.about_short || !payload.worker_profile.services[0].name || !payload.worker_profile.services[0].base_price || payload.worker_profile.service_zones.length === 0 || !payload.worker_profile.availability_text || !payload.worker_profile.cv_file_name) {
+        return showError('Completa todos los campos de trabajador para continuar (incluye PDF de hoja de vida).');
       }
     }
 

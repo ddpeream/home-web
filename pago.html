@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Hogarium's â€“ Pago</title>
+<title>Hogarium's – Pago</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/base.css">
@@ -15,17 +15,17 @@
 <body>
 <script src="js/auth.js"></script>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ══════════════════════════════════
      PANTALLA 1: RESUMEN DEL PEDIDO
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+══════════════════════════════════ -->
 <div class="screen active" id="screen-resumen">
 
-  <div class="status-bar"><span>9:41</span><span>ðŸ”‹ â—€</span></div>
+  <div class="status-bar"><span>9:41</span><span>🔋 ◀</span></div>
 
   <div class="pago-nav">
-    <button class="pago-back" id="btn-back-resumen">â†</button>
+    <button class="pago-back" id="btn-back-resumen">←</button>
     <div class="pago-nav-title">Resumen del pedido</div>
-    <div class="pago-nav-secure">ðŸ”’ Seguro</div>
+    <div class="pago-nav-secure">🔒 Seguro</div>
   </div>
 
   <div class="pago-steps">
@@ -38,31 +38,31 @@
 
     <!-- Servicio contratado -->
     <div class="pago-card">
-      <div class="pago-card-title">ðŸ‘¤ Servicio contratado</div>
+      <div class="pago-card-title">👤 Servicio contratado</div>
       <div class="pago-service">
-        <div class="ps-avatar" id="ps-avatar">ðŸ‘©â€ðŸ³</div>
+        <div class="ps-avatar" id="ps-avatar">👩‍🍳</div>
         <div>
-          <div class="ps-name" id="ps-name">MarÃ­a RodrÃ­guez</div>
+          <div class="ps-name" id="ps-name">María Rodríguez</div>
           <div class="ps-role" id="ps-role">Empleada del Hogar</div>
         </div>
       </div>
       <div class="ps-details">
-        <div class="ps-detail"><span class="ps-detail-icon">ðŸ“…</span><span id="ps-date">Hoy, 18 feb</span></div>
-        <div class="ps-detail"><span class="ps-detail-icon">ðŸ•</span><span id="ps-time">8:00 am - 4:00 pm</span></div>
-        <div class="ps-detail"><span class="ps-detail-icon">ðŸ“</span><span id="ps-location">Tu hogar</span></div>
+        <div class="ps-detail"><span class="ps-detail-icon">📅</span><span id="ps-date">Hoy, 18 feb</span></div>
+        <div class="ps-detail"><span class="ps-detail-icon">🕐</span><span id="ps-time">8:00 am - 4:00 pm</span></div>
+        <div class="ps-detail"><span class="ps-detail-icon">📍</span><span id="ps-location">Tu hogar</span></div>
       </div>
     </div>
 
     <!-- Detalle del cobro -->
     <div class="pago-card">
-      <div class="pago-card-title">ðŸ’° Detalle del cobro</div>
+      <div class="pago-card-title">💰 Detalle del cobro</div>
       <div class="price-rows">
         <div class="price-row">
           <span>Servicio</span>
           <span id="pr-subtotal">$85.000</span>
         </div>
         <div class="price-row">
-          <span>ComisiÃ³n Hogarium's (8%)</span>
+          <span>Comisión Hogarium's (8%)</span>
           <span id="pr-comision">$6.800</span>
         </div>
         <div class="price-row included-row">
@@ -80,47 +80,47 @@
         </div>
       </div>
       <div class="coverage-included">
-        <span class="ci-icon">ðŸ›¡ï¸</span>
-        <span class="ci-text">ARL + Seguro de vida + Contrato digital â€” todo activado con tu pago</span>
+        <span class="ci-icon">🛡️</span>
+        <span class="ci-text">ARL + Seguro de vida + Contrato digital — todo activado con tu pago</span>
       </div>
     </div>
 
-    <!-- CÃ³digo promocional -->
+    <!-- Código promocional -->
     <div class="pago-card">
-      <div class="pago-card-title">ðŸ·ï¸ CÃ³digo promocional</div>
+      <div class="pago-card-title">🏷️ Código promocional</div>
       <div class="coupon-wrap">
-        <input class="coupon-input" id="coupon-input" placeholder="Ingresa tu cÃ³digo">
+        <input class="coupon-input" id="coupon-input" placeholder="Ingresa tu código">
         <button class="coupon-btn" id="coupon-btn">Aplicar</button>
       </div>
     </div>
 
     <!-- Info seguridad -->
     <div class="pago-info">
-      <div class="pago-info-icon">ðŸ›¡ï¸</div>
-      <div class="pago-info-text"><strong>Pago protegido.</strong> Si el servicio no se presta, te devolvemos el 100% de tu dinero. Tu informaciÃ³n estÃ¡ cifrada de extremo a extremo.</div>
+      <div class="pago-info-icon">🛡️</div>
+      <div class="pago-info-text"><strong>Pago protegido.</strong> Si el servicio no se presta, te devolvemos el 100% de tu dinero. Tu información está cifrada de extremo a extremo.</div>
     </div>
 
     <div style="height:20px;"></div>
   </div>
 
   <div class="pago-cta">
-    <button class="pago-cta-btn" onclick="pagoGoTo('screen-metodo')">Continuar al pago â†’</button>
+    <button class="pago-cta-btn" onclick="pagoGoTo('screen-metodo')">Continuar al pago →</button>
   </div>
 
 </div>
 
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     PANTALLA 2: MÃ‰TODO DE PAGO
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ══════════════════════════════════
+     PANTALLA 2: MÉTODO DE PAGO
+══════════════════════════════════ -->
 <div class="screen" id="screen-metodo">
 
-  <div class="status-bar"><span>9:41</span><span>ðŸ”‹ â—€</span></div>
+  <div class="status-bar"><span>9:41</span><span>🔋 ◀</span></div>
 
   <div class="pago-nav">
-    <button class="pago-back" onclick="pagoGoTo('screen-resumen')">â†</button>
-    <div class="pago-nav-title">MÃ©todo de pago</div>
-    <div class="pago-nav-secure">ðŸ”’ Seguro</div>
+    <button class="pago-back" onclick="pagoGoTo('screen-resumen')">←</button>
+    <div class="pago-nav-title">Método de pago</div>
+    <div class="pago-nav-secure">🔒 Seguro</div>
   </div>
 
   <div class="pago-steps">
@@ -133,13 +133,13 @@
 
     <!-- Tarjetas guardadas -->
     <div class="pago-card">
-      <div class="pago-card-title">ðŸ’³ Tarjetas guardadas</div>
+      <div class="pago-card-title">💳 Tarjetas guardadas</div>
       <div class="pm-list">
         <div class="pm-item selected" data-method="visa-4521" onclick="selectMethod(this)">
           <div class="pm-radio"><div class="pm-dot"></div></div>
-          <div class="pm-icon visa-bg">ðŸ’³</div>
+          <div class="pm-icon visa-bg">💳</div>
           <div class="pm-info">
-            <div class="pm-name">Visa â€¢â€¢â€¢â€¢ 4521</div>
+            <div class="pm-name">Visa •••• 4521</div>
             <div class="pm-desc">Vence 12/27</div>
           </div>
         </div>
@@ -149,14 +149,14 @@
 
     <!-- PSE -->
     <div class="pago-card">
-      <div class="pago-card-title">ðŸ¦ Transferencia bancaria</div>
+      <div class="pago-card-title">🏦 Transferencia bancaria</div>
       <div class="pm-list">
         <div class="pm-item" data-method="pse" onclick="selectMethod(this)">
           <div class="pm-radio"><div class="pm-dot"></div></div>
-          <div class="pm-icon pse-bg">ðŸ¦</div>
+          <div class="pm-icon pse-bg">🏦</div>
           <div class="pm-info">
             <div class="pm-name">PSE</div>
-            <div class="pm-desc">DÃ©bito directo de tu banco</div>
+            <div class="pm-desc">Débito directo de tu banco</div>
           </div>
           <div class="pm-badge badge-popular">Popular</div>
         </div>
@@ -165,11 +165,11 @@
 
     <!-- Billeteras digitales -->
     <div class="pago-card">
-      <div class="pago-card-title">ðŸ“± Billeteras digitales</div>
+      <div class="pago-card-title">📱 Billeteras digitales</div>
       <div class="pm-list">
         <div class="pm-item" data-method="nequi" onclick="selectMethod(this)">
           <div class="pm-radio"><div class="pm-dot"></div></div>
-          <div class="pm-icon nequi-bg">ðŸ“±</div>
+          <div class="pm-icon nequi-bg">📱</div>
           <div class="pm-info">
             <div class="pm-name">Nequi</div>
             <div class="pm-desc">Paga desde tu celular</div>
@@ -178,10 +178,10 @@
         </div>
         <div class="pm-item" data-method="daviplata" onclick="selectMethod(this)">
           <div class="pm-radio"><div class="pm-dot"></div></div>
-          <div class="pm-icon davi-bg">ðŸ“²</div>
+          <div class="pm-icon davi-bg">📲</div>
           <div class="pm-info">
             <div class="pm-name">Daviplata</div>
-            <div class="pm-desc">Transferencia instantÃ¡nea</div>
+            <div class="pm-desc">Transferencia instantánea</div>
           </div>
         </div>
       </div>
@@ -189,11 +189,11 @@
 
     <!-- Efectivo -->
     <div class="pago-card">
-      <div class="pago-card-title">ðŸ’µ Efectivo</div>
+      <div class="pago-card-title">💵 Efectivo</div>
       <div class="pm-list">
         <div class="pm-item" data-method="efecty" onclick="selectMethod(this)">
           <div class="pm-radio"><div class="pm-dot"></div></div>
-          <div class="pm-icon efecty-bg">ðŸª</div>
+          <div class="pm-icon efecty-bg">🏪</div>
           <div class="pm-info">
             <div class="pm-name">Efecty</div>
             <div class="pm-desc">Paga en cualquier punto Efecty</div>
@@ -202,13 +202,13 @@
       </div>
     </div>
 
-    <!-- Otros mÃ©todos -->
+    <!-- Otros métodos -->
     <div class="pago-card">
-      <div class="pago-card-title">ðŸŒ Otros mÃ©todos</div>
+      <div class="pago-card-title">🌐 Otros métodos</div>
       <div class="pm-list">
         <div class="pm-item" data-method="mercadopago" onclick="selectMethod(this)">
           <div class="pm-radio"><div class="pm-dot"></div></div>
-          <div class="pm-icon mp-bg">ðŸŸ¡</div>
+          <div class="pm-icon mp-bg">🟡</div>
           <div class="pm-info">
             <div class="pm-name">MercadoPago</div>
             <div class="pm-desc">Cuenta MercadoPago o tarjeta</div>
@@ -216,7 +216,7 @@
         </div>
         <div class="pm-item" data-method="paypal" onclick="selectMethod(this)">
           <div class="pm-radio"><div class="pm-dot"></div></div>
-          <div class="pm-icon paypal-bg">ðŸ”µ</div>
+          <div class="pm-icon paypal-bg">🔵</div>
           <div class="pm-info">
             <div class="pm-name">PayPal</div>
             <div class="pm-desc">Pago internacional en USD</div>
@@ -246,22 +246,22 @@
         <div class="pago-cta-total-label">Total a pagar</div>
         <div class="pago-cta-total-amount" id="cta-total">$91.800</div>
       </div>
-      <button class="pago-cta-btn pago-cta-btn-pay" id="btn-pagar" onclick="procesarPago()">Pagar â†’</button>
+      <button class="pago-cta-btn pago-cta-btn-pay" id="btn-pagar" onclick="procesarPago()">Pagar →</button>
     </div>
   </div>
 
 </div>
 
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ══════════════════════════════════
      PANTALLA 3: NUEVA TARJETA
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+══════════════════════════════════ -->
 <div class="screen" id="screen-tarjeta">
 
-  <div class="status-bar"><span>9:41</span><span>ðŸ”‹ â—€</span></div>
+  <div class="status-bar"><span>9:41</span><span>🔋 ◀</span></div>
 
   <div class="pago-nav">
-    <button class="pago-back" onclick="pagoGoTo('screen-metodo')">â†</button>
+    <button class="pago-back" onclick="pagoGoTo('screen-metodo')">←</button>
     <div class="pago-nav-title">Nueva tarjeta</div>
   </div>
 
@@ -276,10 +276,10 @@
     <!-- Card visual preview -->
     <div class="card-visual">
       <div class="cv-top">
-        <div class="cv-chip">ðŸ’³</div>
+        <div class="cv-chip">💳</div>
         <div class="cv-type" id="cv-type">VISA</div>
       </div>
-      <div class="cv-number" id="cv-number">â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢</div>
+      <div class="cv-number" id="cv-number">•••• •••• •••• ••••</div>
       <div class="cv-bottom">
         <div>
           <div class="cv-label">TITULAR</div>
@@ -295,9 +295,9 @@
     <!-- Card form -->
     <div class="pago-card">
       <div class="card-field">
-        <label class="card-label">NÃºmero de tarjeta</label>
+        <label class="card-label">Número de tarjeta</label>
         <div class="card-input-wrap">
-          <span class="card-input-icon">ðŸ’³</span>
+          <span class="card-input-icon">💳</span>
           <input class="card-input" id="card-number" type="tel" placeholder="0000 0000 0000 0000" maxlength="19" autocomplete="cc-number">
         </div>
       </div>
@@ -305,7 +305,7 @@
       <div class="card-field">
         <label class="card-label">Nombre del titular</label>
         <div class="card-input-wrap">
-          <span class="card-input-icon">ðŸ‘¤</span>
+          <span class="card-input-icon">👤</span>
           <input class="card-input" id="card-name" type="text" placeholder="Como aparece en la tarjeta" autocomplete="cc-name">
         </div>
       </div>
@@ -320,22 +320,22 @@
         <div class="card-field">
           <label class="card-label">CVV</label>
           <div class="card-input-wrap">
-            <span class="card-input-icon">ðŸ”’</span>
+            <span class="card-input-icon">🔒</span>
             <input class="card-input" id="card-cvv" type="tel" placeholder="123" maxlength="4" autocomplete="cc-csc">
           </div>
         </div>
       </div>
 
       <label class="card-save">
-        <input type="checkbox" class="card-save-check" checked> Guardar tarjeta para prÃ³ximos pagos
+        <input type="checkbox" class="card-save-check" checked> Guardar tarjeta para próximos pagos
       </label>
     </div>
 
     <!-- Security badges -->
     <div class="pago-security">
-      <div class="sec-item">ðŸ”’ Cifrado SSL</div>
-      <div class="sec-item">ðŸ›¡ï¸ PCI DSS</div>
-      <div class="sec-item">âœ“ 3D Secure</div>
+      <div class="sec-item">🔒 Cifrado SSL</div>
+      <div class="sec-item">🛡️ PCI DSS</div>
+      <div class="sec-item">✓ 3D Secure</div>
     </div>
 
     <div style="height:20px;"></div>
@@ -343,21 +343,21 @@
 
   <div class="pago-cta">
     <button class="pago-cta-btn" id="btn-pagar-tarjeta" onclick="procesarPagoTarjeta()">
-      Pagar <span id="cta-total-tarjeta">$91.800</span> â†’
+      Pagar <span id="cta-total-tarjeta">$91.800</span> →
     </button>
   </div>
 
 </div>
 
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ══════════════════════════════════
      PANTALLA 4: PROCESANDO
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+══════════════════════════════════ -->
 <div class="screen" id="screen-procesando">
   <div class="procesando-wrap">
     <div class="procesando-circle">
       <div class="procesando-pulse"></div>
-      <div class="procesando-icon">ðŸ’³</div>
+      <div class="procesando-icon">💳</div>
     </div>
     <div class="procesando-title">Procesando tu pago...</div>
     <div class="procesando-sub">No cierres esta ventana</div>
@@ -366,17 +366,17 @@
       <span class="pdot"></span>
       <span class="pdot"></span>
     </div>
-    <div class="procesando-secure">ðŸ”’ ConexiÃ³n segura y cifrada</div>
+    <div class="procesando-secure">🔒 Conexión segura y cifrada</div>
   </div>
 </div>
 
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     PANTALLA 5: Ã‰XITO
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ══════════════════════════════════
+     PANTALLA 5: ÉXITO
+══════════════════════════════════ -->
 <div class="screen" id="screen-exito">
 
-  <div class="status-bar"><span>9:41</span><span>ðŸ”‹ â—€</span></div>
+  <div class="status-bar"><span>9:41</span><span>🔋 ◀</span></div>
 
   <div class="pago-scroll" style="padding-bottom:40px;">
 
@@ -395,10 +395,10 @@
 
     <!-- Comprobante -->
     <div class="pago-card">
-      <div class="pago-card-title">ðŸ“„ Comprobante</div>
+      <div class="pago-card-title">📄 Comprobante</div>
       <div class="receipt-rows">
         <div class="receipt-row">
-          <span class="receipt-label">NÂ° TransacciÃ³n</span>
+          <span class="receipt-label">N° Transacción</span>
           <span class="receipt-value" id="rx-txn">#TXN-28471</span>
         </div>
         <div class="receipt-row">
@@ -407,11 +407,11 @@
         </div>
         <div class="receipt-row">
           <span class="receipt-label">Profesional</span>
-          <span class="receipt-value" id="rx-worker">MarÃ­a RodrÃ­guez</span>
+          <span class="receipt-value" id="rx-worker">María Rodríguez</span>
         </div>
         <div class="receipt-row">
-          <span class="receipt-label">MÃ©todo de pago</span>
-          <span class="receipt-value" id="rx-method">Visa â€¢â€¢â€¢â€¢ 4521</span>
+          <span class="receipt-label">Método de pago</span>
+          <span class="receipt-value" id="rx-method">Visa •••• 4521</span>
         </div>
         <div class="receipt-divider"></div>
         <div class="receipt-row receipt-total">
@@ -420,55 +420,55 @@
         </div>
         <div class="receipt-row">
           <span class="receipt-label">Fecha</span>
-          <span class="receipt-value" id="rx-date">18 feb 2025 Â· 9:42 am</span>
+          <span class="receipt-value" id="rx-date">18 feb 2025 · 9:42 am</span>
         </div>
       </div>
     </div>
 
     <!-- Coberturas -->
     <div class="pago-info" style="margin-top:16px;">
-      <div class="pago-info-icon">ðŸ›¡ï¸</div>
-      <div class="pago-info-text"><strong>Coberturas activadas:</strong> ARL incluida, Seguro de vida activo y Contrato digital generado. Consulta todo en la secciÃ³n Confianza.</div>
+      <div class="pago-info-icon">🛡️</div>
+      <div class="pago-info-text"><strong>Coberturas activadas:</strong> ARL incluida, Seguro de vida activo y Contrato digital generado. Consulta todo en la sección Confianza.</div>
     </div>
 
     <!-- Acciones -->
     <div class="exito-actions">
       <a class="exito-btn-primary" href="actividad.html">Ver en Actividad</a>
-      <a class="exito-btn-secondary" href="mensajes.html">ðŸ’¬ Enviar mensaje</a>
+      <a class="exito-btn-secondary" href="mensajes.html">💬 Enviar mensaje</a>
     </div>
 
     <div class="exito-home">
-      <a href="index.html" class="exito-home-link">â† Volver al inicio</a>
+      <a href="index.html" class="exito-home-link">← Volver al inicio</a>
     </div>
 
   </div>
 </div>
 
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ══════════════════════════════════
      PANTALLA 6: ERROR
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+══════════════════════════════════ -->
 <div class="screen" id="screen-error">
 
-  <div class="status-bar"><span>9:41</span><span>ðŸ”‹ â—€</span></div>
+  <div class="status-bar"><span>9:41</span><span>🔋 ◀</span></div>
 
   <div class="pago-scroll" style="padding-bottom:40px;">
 
     <div class="error-hero">
       <div class="error-icon-wrap">
-        <div class="error-icon">âœ•</div>
+        <div class="error-icon">✕</div>
       </div>
       <div class="error-title">Pago no procesado</div>
-      <div class="error-sub" id="error-msg">La tarjeta fue rechazada por fondos insuficientes. Intenta con otro mÃ©todo de pago.</div>
+      <div class="error-sub" id="error-msg">La tarjeta fue rechazada por fondos insuficientes. Intenta con otro método de pago.</div>
     </div>
 
     <div class="error-actions">
       <button class="error-btn-primary" onclick="reintentar()">Reintentar pago</button>
-      <button class="error-btn-secondary" onclick="pagoGoTo('screen-metodo')">Cambiar mÃ©todo de pago</button>
+      <button class="error-btn-secondary" onclick="pagoGoTo('screen-metodo')">Cambiar método de pago</button>
     </div>
 
     <div class="exito-home">
-      <a href="index.html" class="exito-home-link">â† Volver al inicio</a>
+      <a href="index.html" class="exito-home-link">← Volver al inicio</a>
     </div>
 
   </div>
@@ -477,4 +477,3 @@
 <script src="js/pago.js"></script>
 </body>
 </html>
-

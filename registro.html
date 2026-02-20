@@ -12,19 +12,29 @@
 <body>
 
 <div class="auth-page">
-
   <div class="auth-hero" style="padding-top:40px; padding-bottom:24px;">
     <div class="auth-logo">
       <div class="auth-logo-icon">🤲</div>
       <div class="auth-logo-text">Hogarium's</div>
     </div>
     <div class="auth-title">Crea tu cuenta</div>
-    <div class="auth-subtitle">Únete a la plataforma de servicios para el hogar con respaldo legal.</div>
+    <div class="auth-subtitle">Registro MVP con perfil cliente/trabajador.</div>
   </div>
 
   <form class="auth-form" id="registro-form" autocomplete="off">
-
     <div id="reg-error" class="auth-error"></div>
+
+    <div class="auth-field">
+      <label class="auth-label">Rol inicial</label>
+      <div class="auth-input-wrap">
+        <span class="auth-input-icon">🧩</span>
+        <select class="auth-input" id="reg-role">
+          <option value="cliente">Cliente</option>
+          <option value="trabajador">Trabajador</option>
+          <option value="ambos">Ambos</option>
+        </select>
+      </div>
+    </div>
 
     <div class="auth-field">
       <label class="auth-label">Nombre completo</label>
@@ -39,6 +49,137 @@
       <div class="auth-input-wrap">
         <span class="auth-input-icon">📧</span>
         <input class="auth-input" id="reg-email" type="email" placeholder="tu@correo.com" autocomplete="email">
+      </div>
+    </div>
+
+    <div class="auth-field">
+      <label class="auth-label">Teléfono WhatsApp</label>
+      <div class="auth-input-wrap">
+        <span class="auth-input-icon">📱</span>
+        <input class="auth-input" id="reg-phone" type="tel" placeholder="3001234567">
+      </div>
+    </div>
+
+    <div class="auth-field">
+      <label class="auth-label">Ciudad</label>
+      <div class="auth-input-wrap">
+        <span class="auth-input-icon">📍</span>
+        <input class="auth-input" id="reg-city" type="text" placeholder="Medellín">
+      </div>
+    </div>
+
+    <div class="auth-field">
+      <label class="auth-label">Tipo de documento</label>
+      <div class="auth-input-wrap">
+        <span class="auth-input-icon">🪪</span>
+        <select class="auth-input" id="reg-doc-type">
+          <option value="CC">CC</option>
+          <option value="CE">CE</option>
+          <option value="PPT">PPT</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="auth-field">
+      <label class="auth-label">Número de documento</label>
+      <div class="auth-input-wrap">
+        <span class="auth-input-icon">🔢</span>
+        <input class="auth-input" id="reg-doc-number" type="text" placeholder="1234567890">
+      </div>
+    </div>
+
+    <div class="auth-field">
+      <label class="auth-label">Fecha de nacimiento</label>
+      <div class="auth-input-wrap">
+        <span class="auth-input-icon">🎂</span>
+        <input class="auth-input" id="reg-birth-date" type="date">
+      </div>
+    </div>
+
+    <div id="worker-fields">
+      <div class="auth-field">
+        <label class="auth-label">Categoría principal</label>
+        <div class="auth-input-wrap">
+          <span class="auth-input-icon">🛠️</span>
+          <input class="auth-input" id="reg-main-category" type="text" placeholder="hogar / técnico / cuidado">
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="auth-label">Rol profesional</label>
+        <div class="auth-input-wrap">
+          <span class="auth-input-icon">💼</span>
+          <input class="auth-input" id="reg-role-title" type="text" placeholder="Ej: Técnico electricista">
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="auth-label">Años de experiencia</label>
+        <div class="auth-input-wrap">
+          <span class="auth-input-icon">⭐</span>
+          <input class="auth-input" id="reg-exp-years" type="number" min="0" placeholder="3">
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="auth-label">Bio corta</label>
+        <div class="auth-input-wrap">
+          <span class="auth-input-icon">📝</span>
+          <input class="auth-input" id="reg-about-short" type="text" placeholder="Resumen profesional corto">
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="auth-label">Servicio principal</label>
+        <div class="auth-input-wrap">
+          <span class="auth-input-icon">🧰</span>
+          <input class="auth-input" id="reg-service-name" type="text" placeholder="Ej: Diagnóstico eléctrico">
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="auth-label">Precio base</label>
+        <div class="auth-input-wrap">
+          <span class="auth-input-icon">💰</span>
+          <input class="auth-input" id="reg-base-price" type="number" min="0" placeholder="60000">
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="auth-label">Unidad</label>
+        <div class="auth-input-wrap">
+          <span class="auth-input-icon">📦</span>
+          <select class="auth-input" id="reg-price-unit">
+            <option value="hora">hora</option>
+            <option value="visita">visita</option>
+            <option value="dia">día</option>
+            <option value="sesion">sesión</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="auth-label">Zonas de servicio (coma separadas)</label>
+        <div class="auth-input-wrap">
+          <span class="auth-input-icon">🗺️</span>
+          <input class="auth-input" id="reg-service-zones" type="text" placeholder="Laureles, El Poblado, Belén">
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="auth-label">Disponibilidad (texto)</label>
+        <div class="auth-input-wrap">
+          <span class="auth-input-icon">🗓️</span>
+          <input class="auth-input" id="reg-availability" type="text" placeholder="Lun-Vie 8:00-18:00">
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="auth-label">Hoja de vida (URL temporal)</label>
+        <div class="auth-input-wrap">
+          <span class="auth-input-icon">📄</span>
+          <input class="auth-input" id="reg-cv-url" type="url" placeholder="https://.../hv.pdf">
+        </div>
       </div>
     </div>
 
@@ -64,29 +205,119 @@
       <div class="auth-spinner" id="reg-spinner"></div>
       <span id="reg-btn-text">Crear cuenta</span>
     </button>
-
-    <div class="auth-divider">
-      <div class="auth-divider-line"></div>
-      <div class="auth-divider-text">o regístrate con</div>
-      <div class="auth-divider-line"></div>
-    </div>
-
-    <div class="auth-social">
-      <button type="button" class="social-btn">🔵</button>
-      <button type="button" class="social-btn">🔴</button>
-      <button type="button" class="social-btn">⚫</button>
-    </div>
-
   </form>
 
   <div class="auth-footer">
     ¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a>
   </div>
-
 </div>
 
 <div class="auth-toast" id="reg-toast">✅ Cuenta creada con éxito</div>
 
-<script src="js/registro.js"></script>
+<script>
+(function () {
+  var form = document.getElementById('registro-form');
+  var role = document.getElementById('reg-role');
+  var workerFields = document.getElementById('worker-fields');
+  var errorBox = document.getElementById('reg-error');
+  var submitBtn = document.getElementById('reg-btn');
+  var spinner = document.getElementById('reg-spinner');
+  var btnText = document.getElementById('reg-btn-text');
+  var toast = document.getElementById('reg-toast');
+
+  function setWorkerVisibility() {
+    var show = role.value === 'trabajador' || role.value === 'ambos';
+    workerFields.style.display = show ? 'block' : 'none';
+  }
+  role.addEventListener('change', setWorkerVisibility);
+  setWorkerVisibility();
+
+  document.getElementById('toggle-pass').addEventListener('click', function() {
+    var p = document.getElementById('reg-pass');
+    p.type = p.type === 'password' ? 'text' : 'password';
+  });
+  document.getElementById('toggle-pass2').addEventListener('click', function() {
+    var p = document.getElementById('reg-pass2');
+    p.type = p.type === 'password' ? 'text' : 'password';
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    errorBox.classList.remove('show');
+
+    var payload = {
+      account: {
+        full_name: document.getElementById('reg-name').value.trim(),
+        email: document.getElementById('reg-email').value.trim(),
+        phone_whatsapp: document.getElementById('reg-phone').value.trim(),
+        city: document.getElementById('reg-city').value.trim(),
+        role_initial: role.value
+      },
+      identity: {
+        document_type: document.getElementById('reg-doc-type').value,
+        document_number: document.getElementById('reg-doc-number').value.trim(),
+        birth_date: document.getElementById('reg-birth-date').value
+      },
+      worker_profile: null,
+      compliance: {
+        terms_accepted: true,
+        background_check_status: 'pending',
+        profile_status: 'draft'
+      }
+    };
+
+    var pass = document.getElementById('reg-pass').value;
+    var pass2 = document.getElementById('reg-pass2').value;
+
+    if (!payload.account.full_name || !payload.account.email || !payload.account.phone_whatsapp || !payload.account.city || !payload.identity.document_number || !payload.identity.birth_date || !pass || !pass2) {
+      return showError('Completa todos los campos obligatorios de cuenta.');
+    }
+    if (!payload.account.email.includes('@')) return showError('Correo inválido.');
+    if (pass.length < 8) return showError('La contraseña debe tener mínimo 8 caracteres.');
+    if (pass !== pass2) return showError('Las contraseñas no coinciden.');
+
+    if (role.value === 'trabajador' || role.value === 'ambos') {
+      payload.worker_profile = {
+        main_category: document.getElementById('reg-main-category').value.trim(),
+        role_title: document.getElementById('reg-role-title').value.trim(),
+        experience_years: Number(document.getElementById('reg-exp-years').value || 0),
+        about_short: document.getElementById('reg-about-short').value.trim(),
+        services: [
+          {
+            name: document.getElementById('reg-service-name').value.trim(),
+            base_price: Number(document.getElementById('reg-base-price').value || 0),
+            unit: document.getElementById('reg-price-unit').value
+          }
+        ],
+        service_zones: document.getElementById('reg-service-zones').value.split(',').map(function(x){ return x.trim(); }).filter(Boolean),
+        availability_text: document.getElementById('reg-availability').value.trim(),
+        cv_url: document.getElementById('reg-cv-url').value.trim()
+      };
+
+      if (!payload.worker_profile.main_category || !payload.worker_profile.role_title || !payload.worker_profile.about_short || !payload.worker_profile.services[0].name || !payload.worker_profile.services[0].base_price || payload.worker_profile.service_zones.length === 0 || !payload.worker_profile.availability_text || !payload.worker_profile.cv_url) {
+        return showError('Completa todos los campos de trabajador para continuar.');
+      }
+    }
+
+    submitBtn.disabled = true;
+    spinner.style.display = 'block';
+    btnText.textContent = 'Creando cuenta...';
+
+    setTimeout(function() {
+      sessionStorage.setItem('HOGARIUM_signup_payload', JSON.stringify(payload));
+      sessionStorage.setItem('HOGARIUM_user_name', payload.account.full_name);
+      toast.classList.add('show');
+      setTimeout(function() {
+        window.location.href = 'login.html';
+      }, 1300);
+    }, 800);
+  });
+
+  function showError(msg) {
+    errorBox.textContent = msg;
+    errorBox.classList.add('show');
+  }
+})();
+</script>
 </body>
 </html>

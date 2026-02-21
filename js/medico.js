@@ -1,6 +1,6 @@
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-// MÃ‰DICO â€” Module Logic
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// 
+// MDICO  Module Logic
+// 
 
 var selectedPrice = 85000;
 var isUrgent = false;
@@ -23,7 +23,7 @@ function formatPrice(num) {
 function updateAgendarPrice() {
   var total = getTotalPrice();
   var btn = document.querySelector('.submit-btn');
-  if (btn) btn.textContent = 'Confirmar y pagar ' + formatPrice(total) + ' â†’';
+  if (btn) btn.textContent = 'Confirmar y pagar ' + formatPrice(total) + ' ';
 
   // Update resumen card price
   var resPrice = document.querySelector('.res-price');
@@ -49,8 +49,8 @@ function goToPago() {
 
   sessionStorage.setItem('HOGARIUM_pago', JSON.stringify({
     name: 'Dr. Frank Rosales',
-    role: 'MÃ©dico General',
-    emoji: 'ðŸ‘¨â€âš•ï¸',
+    role: 'Médico General',
+    emoji: '️',
     bg: 'bg-sky',
     price: total,
     priceSub: priceSub,
@@ -106,7 +106,7 @@ function selectTipo(el) {
   // Update resumen card tipo text
   var resRole = document.querySelector('.res-role');
   if (resRole) {
-    resRole.textContent = 'Mar 18 Â· 10:00 am Â· ' + el.querySelector('.tipo-name').textContent;
+    resRole.textContent = 'Mar 18 · 10:00 am · ' + el.querySelector('.tipo-name').textContent;
   }
 
   updateAgendarPrice();
@@ -139,11 +139,11 @@ document.querySelectorAll('.day-chip:not(.unavail)').forEach(function(chip) {
 var downloadBtn = document.querySelector('.download-btn');
 if (downloadBtn) {
   downloadBtn.addEventListener('click', function() {
-    alert('La descarga de PDF estarÃ¡ disponible prÃ³ximamente.');
+    alert('La descarga de PDF estará disponible próximamente.');
   });
 }
 
-// â”€â”€â”€ Hash-based navigation â”€â”€â”€
+//  Hash-based navigation 
 (function() {
   if (window.location.hash === '#postconsulta') {
     goTo('screen-postconsulta');
